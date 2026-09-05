@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Barlow", ui-sans-serif, system-ui, sans-serif;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Aplicación global de fuente, fondo y texto base */
+body {
+  font-family: var(--font-sans);
+  @apply bg-[#FAF6F0] text-[#121110] transition-colors duration-200;
+}
+
+html.dark body {
+  @apply bg-[#121110] text-[#FAF6F0];
+}
