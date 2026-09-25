@@ -70,7 +70,7 @@ export default function ServicesSection({ onOpenWizard }) {
                 className="relative flex flex-col rounded-3xl border border-[#E6DFD5] bg-[#FAF6F0] p-8 shadow-sm hover:shadow-md transition"
               >
                 <div className="flex items-center justify-between">
-                  <div className="p-3 rounded-2xl bg-[#FFFBF7] text-[#C85A32] border border-[#E6DFD5]">
+                  <div className="p-3 rounded-2xl bg-[#FFFBF7] text-[#ee5412] border border-[#E6DFD5]">
                     <Icon className="h-6 w-6" />
                   </div>
                   <span className="rounded-full bg-[#EAF2EF] px-3 py-1 text-xs font-semibold text-[#52796F]">
@@ -83,7 +83,7 @@ export default function ServicesSection({ onOpenWizard }) {
 
                 <div className="my-6 border-t border-[#E6DFD5] pt-4">
                   <div className="text-2xl font-black text-[#2D2A26]">{s.price}</div>
-                  <div className="text-xs font-semibold text-[#C85A32] mt-0.5">{s.urgency}</div>
+                  <div className="text-xs font-semibold text-[#ee5412] mt-0.5">{s.urgency}</div>
                 </div>
 
                 <ul className="space-y-3 text-xs text-[#2D2A26] mb-8 grow">
@@ -97,7 +97,7 @@ export default function ServicesSection({ onOpenWizard }) {
 
                 <button
                   onClick={onOpenWizard}
-                  className="w-full rounded-xl bg-[#2D2A26] py-3 text-xs font-semibold text-white hover:bg-[#C85A32] transition cursor-pointer"
+                  className="w-full rounded-xl bg-[#2D2A26] py-3 text-xs font-semibold text-white hover:bg-[#ee5412] transition cursor-pointer"
                 >
                   Seleccionar este servicio
                 </button>

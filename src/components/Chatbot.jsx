@@ -47,7 +47,7 @@ export default function Chatbot() {
       {!isOpen ? (
         <button
           onClick={() => setIsOpen(true)}
-          className="flex items-center gap-2 rounded-full bg-[#C85A32] px-5 py-3 text-sm font-semibold text-white shadow-xl hover:bg-[#B34D28] transition cursor-pointer"
+          className="flex items-center gap-2 rounded-full bg-[#ee5412] px-5 py-3 text-sm font-semibold text-white shadow-xl hover:bg-[#B34D28] transition cursor-pointer"
         >
           <FiMessageSquare className="h-5 w-5" />
           <span>Consultar Assistant</span>
@@ -70,7 +70,7 @@ export default function Chatbot() {
                 key={idx}
                 className={`max-w-[80%] rounded-2xl p-3 ${
                   m.sender === "user"
-                    ? "ml-auto bg-[#C85A32] text-white"
+                    ? "ml-auto bg-[#ee5412] text-white"
                     : "mr-auto bg-[#F4EFE6] dark:bg-[#221F1C] text-[#121110] dark:text-[#FAF6F0] border border-[#EAE3D9] dark:border-[#2D2A26]"
                 }`}
               >
@@ -91,7 +91,7 @@ export default function Chatbot() {
             />
             <button
               onClick={handleSend}
-              className="rounded-xl bg-[#C85A32] p-2.5 text-white hover:bg-[#B34D28] transition"
+              className="rounded-xl bg-[#ee5412] p-2.5 text-white hover:bg-[#ee5412] transition"
             >
               <FiSend className="h-4 w-4" />
             </button>

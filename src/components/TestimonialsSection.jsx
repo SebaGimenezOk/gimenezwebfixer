@@ -42,7 +42,7 @@ export default function TestimonialsSection() {
               className="flex flex-col justify-between rounded-3xl border border-[#EAE3D9] dark:border-[#2D2A26] bg-[#F4EFE6] dark:bg-[#1E1B18] p-8 shadow-sm transition-colors"
             >
               <div>
-                <div className="flex items-center gap-1 text-[#C85A32] mb-4">
+                <div className="flex items-center gap-1 text-[#ee5412] mb-4">
                   {[...Array(r.stars)].map((_, i) => (
                     <FiStar key={i} className="h-4 w-4 fill-current" />
                   ))}

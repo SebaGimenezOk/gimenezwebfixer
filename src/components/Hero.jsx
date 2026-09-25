@@ -7,13 +7,13 @@ export default function Hero({ onOpenWizard }) {
 
       <div className="mx-auto max-w-4xl px-6 text-center sm:px-10">
         <div className="inline-flex items-center gap-2 rounded-full border border-[#E6DFD5] bg-[#FFFBF7] px-4 py-2 text-xs font-semibold text-[#52796F] shadow-sm">
-          <FiZap className="h-4 w-4 text-[#C85A32]" />
+          <FiZap className="h-4 w-4 text-[#ee5412]" />
           Diagnóstico técnico interactivo paso a paso
         </div>
 
         <h1 className="mt-6 text-4xl font-extrabold leading-tight text-[#2D2A26] sm:text-6xl tracking-tight">
           Tu sitio arreglado en minutos,{" "}
-          <span className="text-[#C85A32] italic font-normal">
+          <span className="text-[#ee5412] italic font-normal">
             no en semanas.
           </span>
         </h1>
@@ -26,7 +26,7 @@ export default function Hero({ onOpenWizard }) {
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <button
             onClick={onOpenWizard}
-            className="w-full sm:w-auto flex items-center justify-center gap-3 rounded-full bg-[#C85A32] px-9 py-4 text-base font-semibold text-white shadow-xl shadow-[#C85A32]/25 hover:bg-[#B34D28] hover:scale-[1.02] transition cursor-pointer"
+            className="w-full sm:w-auto flex items-center justify-center gap-3 rounded-full bg-[#ee5412] px-9 py-4 text-base font-semibold text-white shadow-xl shadow-[#ee5412]/25 hover:bg-[#ee5412] hover:scale-[1.02] transition cursor-pointer"
           >
             Iniciar Cotización Guiada
             <FiArrowRight className="h-5 w-5" />

@@ -59,7 +59,7 @@ export default function DiagnosticAndFaq() {
                   key={i}
                   className="rounded-2xl border border-[#E6DFD5] bg-white p-6 shadow-sm"
                 >
-                  <Icon className="h-7 w-7 text-[#C85A32]" />
+                  <Icon className="h-7 w-7 text-[#ee5412]" />
                   <h3 className="mt-4 text-base font-bold text-[#2D2A26]">
                     {m.title}
                   </h3>
@@ -92,7 +92,7 @@ export default function DiagnosticAndFaq() {
                 >
                   <span>{faq.q}</span>
                   <FiChevronDown
-                    className={`h-5 w-5 text-[#C85A32] transition-transform ${
+                    className={`h-5 w-5 text-[#ee5412] transition-transform ${
                       openFaq === idx ? "rotate-180" : ""
                     }`}
                   />

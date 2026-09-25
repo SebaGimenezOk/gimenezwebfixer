@@ -24,7 +24,7 @@ export default function ThemeToggle() {
       className="p-2 rounded-full border border-[#2D2A26]/20 dark:border-[#2D2A26] bg-[#EAE3D9] dark:bg-[#1E1B18] text-[#121110] dark:text-[#FAF6F0] hover:scale-105 transition cursor-pointer"
       title="Cambiar tema"
     >
-      {darkMode ? <FiSun className="h-5 w-5 text-[#C85A32]" /> : <FiMoon className="h-5 w-5 text-[#C85A32]" />}
+      {darkMode ? <FiSun className="h-5 w-5 text-[#d4430e]" /> : <FiMoon className="h-5 w-5 text-[#d4430e]" />}
     </button>
   );
 }

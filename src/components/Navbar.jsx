@@ -7,25 +7,25 @@ export default function Navbar({ onOpenWizard }) {
         <div className="flex items-center gap-3">
           <BearLogo className="h-12 w-auto" />
           <span className="text-xl font-bold tracking-tight text-[#2D2A26]">
-            Gimenez<span className="text-[#C85A32]">Web</span>Fixer
+            Gimenez<span className="text-[#ee5412]">Web</span>Fixer
           </span>
         </div>
 
         <div className="hidden md:flex items-center gap-8 text-sm font-semibold text-[#7A7265]">
-          <a href="#servicios" className="hover:text-[#C85A32] transition">
+          <a href="#servicios" className="hover:text-[#ee5412] transition">
             Servicios
           </a>
-          <a href="#modulos" className="hover:text-[#C85A32] transition">
+          <a href="#modulos" className="hover:text-[#ee5412] transition">
             Diagnóstico
           </a>
-          <a href="#faq" className="hover:text-[#C85A32] transition">
+          <a href="#faq" className="hover:text-[#ee5412] transition">
             Preguntas
           </a>
         </div>
 
         <button
           onClick={onOpenWizard}
-          className="rounded-full bg-[#C85A32] px-6 py-2.5 text-xs sm:text-sm font-semibold text-white shadow-md shadow-[#C85A32]/20 hover:bg-[#B34D28] transition cursor-pointer"
+          className="rounded-full bg-[#ee5412] px-6 py-2.5 text-xs sm:text-sm font-semibold text-white shadow-md shadow-[#C85A32]/20 hover:bg-[#ee5412] transition cursor-pointer"
         >
           Cotizar Reparación
         </button>
