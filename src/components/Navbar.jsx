@@ -5,7 +5,7 @@ export default function Navbar({ onOpenWizard }) {
     <header className="fixed top-0 z-40 w-full border-b border-[#E6DFD5]/80 bg-[#FAF6F0]/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 sm:px-10">
         <div className="flex items-center gap-3">
-          <BearLogo className="h-12 w-auto" />
+          <BearLogo className="h-16 w-auto sm:h-20" />
           <span className="text-xl font-bold tracking-tight text-[#2D2A26]">
             Gimenez<span className="text-[#ee5412]">Web</span>Fixer
           </span>
