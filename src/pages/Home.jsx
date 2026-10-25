@@ -6,16 +6,6 @@ import DiagnosticAndFaq from "../components/DiagnosticAndFaq";
 import InteractiveQuoteWizard from "../components/InteractiveQuoteWizard";
 import TestimonialsSection from "../components/TestimonialsSection";
 
-import Footer from "../components/Footer";
-
-// Carga global de Helvetica Neue / Inter fallback si no está local
-if (typeof document !== "undefined") {
-  const link = document.createElement("link");
-  link.href =
-    "https://fonts.cdnfonts.com/css/helvetica-neue-5";
-  link.rel = "stylesheet";
-  document.head.appendChild(link);
-}
 
 export default function App() {
   const [wizardOpen, setWizardOpen] = useState(false);
@@ -37,7 +27,7 @@ export default function App() {
       <TestimonialsSection />
    
 
-      <Footer />
+     
     </div>
   );
 }
