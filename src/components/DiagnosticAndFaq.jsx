@@ -46,7 +46,7 @@ export default function DiagnosticAndFaq() {
       <section id="modulos" className="py-20 bg-[#FAF6F0]">
         <div className="mx-auto max-w-7xl px-6 sm:px-10">
           <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl font-extrabold text-[#2D2A26] sm:text-4xl">
+            <h2 className="text-3xl font-black text-[#2D2A26] sm:text-4xl">
               Módulos de Diagnóstico Específicos
             </h2>
           </div>
@@ -76,7 +76,7 @@ export default function DiagnosticAndFaq() {
       {/* FAQ */}
       <section id="faq" className="py-20 bg-[#FFFBF7] border-t border-[#E6DFD5]">
         <div className="mx-auto max-w-3xl px-6 sm:px-10">
-          <h2 className="text-3xl font-extrabold text-center text-[#2D2A26]">
+          <h2 className="text-3xl font-black text-center text-[#2D2A26]">
             Preguntas Frecuentes
           </h2>
 
@@ -88,7 +88,7 @@ export default function DiagnosticAndFaq() {
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="w-full text-left p-5 font-semibold text-sm text-[#2D2A26] flex items-center justify-between cursor-pointer"
+                  className="w-full text-left p-5 font-bold text-sm text-[#2D2A26] flex items-center justify-between cursor-pointer"
                 >
                   <span>{faq.q}</span>
                   <FiChevronDown

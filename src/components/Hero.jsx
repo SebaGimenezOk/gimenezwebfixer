@@ -11,7 +11,7 @@ export default function Hero({ onOpenWizard }) {
           Diagnóstico técnico interactivo paso a paso
         </div>
 
-        <h1 className="mt-6 text-4xl font-extrabold leading-tight text-[#2D2A26] sm:text-6xl tracking-tight">
+        <h1 className="mt-6 text-4xl font-black leading-tight text-[#2D2A26] sm:text-6xl tracking-tight">
           Tu sitio arreglado en minutos,{" "}
           <span className="text-[#ee5412] italic font-normal">
             no en semanas.

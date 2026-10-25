@@ -53,7 +53,7 @@ export default function ServicesSection({ onOpenWizard }) {
     <section id="servicios" className="py-20 bg-[#FFFBF7] border-y border-[#E6DFD5]">
       <div className="mx-auto max-w-7xl px-6 sm:px-10">
         <div className="text-center max-w-2xl mx-auto">
-          <h2 className="text-3xl font-extrabold text-[#2D2A26] sm:text-4xl">
+          <h2 className="text-3xl font-black text-[#2D2A26] sm:text-4xl">
             Soluciones Especializadas
           </h2>
           <p className="mt-3 text-[#7A7265] text-sm sm:text-base">
@@ -78,7 +78,7 @@ export default function ServicesSection({ onOpenWizard }) {
                   </span>
                 </div>
 
-                <h3 className="mt-6 text-xl font-bold text-[#2D2A26]">{s.name}</h3>
+                <h3 className="mt-6 text-xl font-black text-[#2D2A26]">{s.name}</h3>
                 <p className="mt-2 text-xs text-[#7A7265] leading-relaxed">{s.subtitle}</p>
 
                 <div className="my-6 border-t border-[#E6DFD5] pt-4">
