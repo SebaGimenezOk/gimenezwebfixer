@@ -1,30 +1,40 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import BearLogo from "./BearLogo";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+
+  // Función para determinar si el link debe scrollear o ir a la Home primero
+  const getRoute = (anchor) => {
+    return location.pathname === "/" ? anchor : `/${anchor}`;
+  };
 
   return (
     <header className="fixed top-0 z-40 w-full border-b border-[#E6DFD5]/80 bg-[#FAF6F0]/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 sm:px-10">
         
-        {/* Marca / Logo */}
-        <div className="flex items-center gap-3 shrink-0">
+        {/* Marca / Logo -> Te devuelve a la Home */}
+        <Link to="/" className="flex items-center gap-3 shrink-0 cursor-pointer">
           <BearLogo className="h-12 w-auto sm:h-16" />
           <span className="text-lg font-bold tracking-tight text-[#2D2A26] sm:text-xl">
             Gimenez<span className="text-[#ee5412]">Web</span>Fixer
           </span>
-        </div>
+        </Link>
 
         {/* Menú Desktop (>= 768px) */}
         <div className="hidden md:flex items-center gap-8 text-sm font-semibold text-[#7A7265]">
-          <a href="#servicios" className="hover:text-[#ee5412] transition">
+          <a href={getRoute("#servicios")} className="hover:text-[#ee5412] transition">
             Servicios
           </a>
-          <a href="#modulos" className="hover:text-[#ee5412] transition">
-            Diagnóstico
-          </a>
-          <a href="#faq" className="hover:text-[#ee5412] transition">
+          <Link to="/eliminacion-malware" className="hover:text-[#ee5412] transition">
+            Malware
+          </Link>
+          <Link to="/optimizacion-velocidad" className="hover:text-[#ee5412] transition">
+            Velocidad
+          </Link>
+          <a href={getRoute("#faq")} className="hover:text-[#ee5412] transition">
             Preguntas
           </a>
         </div>
@@ -33,7 +43,7 @@ export default function Navbar() {
         <button
           onClick={() => setIsOpen(!isOpen)}
           type="button"
-          className="md:hidden p-2 text-[#2D2A26] hover:text-[#ee5412] focus:outline-none"
+          className="md:hidden p-2 text-[#2D2A26] hover:text-[#ee5412] focus:outline-none cursor-pointer"
           aria-label="Abrir menú"
         >
           <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -50,21 +60,28 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden border-t border-[#E6DFD5]/80 bg-[#FAF6F0] px-6 py-4 flex flex-col gap-4 text-sm font-semibold text-[#7A7265]">
           <a 
-            href="#servicios" 
+            href={getRoute("#servicios")} 
             onClick={() => setIsOpen(false)} 
             className="hover:text-[#ee5412] transition"
           >
             Servicios
           </a>
-          <a 
-            href="#modulos" 
+          <Link 
+            to="/eliminacion-malware" 
             onClick={() => setIsOpen(false)} 
             className="hover:text-[#ee5412] transition"
           >
-            Diagnóstico
-          </a>
+            Malware
+          </Link>
+          <Link 
+            to="/optimizacion-velocidad" 
+            onClick={() => setIsOpen(false)} 
+            className="hover:text-[#ee5412] transition"
+          >
+            Velocidad
+          </Link>
           <a 
-            href="#faq" 
+            href={getRoute("#faq")} 
             onClick={() => setIsOpen(false)} 
             className="hover:text-[#ee5412] transition"
           >

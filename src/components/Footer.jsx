@@ -1,3 +1,4 @@
+import { Link, useLocation } from "react-router-dom";
 import {
   FiGithub,
   FiLinkedin,
@@ -9,8 +10,14 @@ import {
 import BearLogo from "./BearLogo";
 
 export default function Footer() {
+  const location = useLocation();
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const getRoute = (anchor) => {
+    return location.pathname === "/" ? anchor : `/${anchor}`;
   };
 
   return (
@@ -20,12 +27,12 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-4 pb-12 border-b border-[#EAE3D9] dark:border-[#2D2A26]">
           {/* Col 1: Marca & Bio */}
           <div className="md:col-span-2 space-y-4">
-            <div className="flex items-center gap-3">
+            <Link to="/" className="flex items-center gap-3 cursor-pointer">
               <BearLogo className="h-9 w-auto" />
               <span className="text-xl font-bold tracking-tight text-[#121110] dark:text-[#FAF6F0]">
                 Gimenez<span className="text-[#ee5412]">Web</span>Fixer
               </span>
-            </div>
+            </Link>
             <p className="text-xs font-mono leading-relaxed text-[#5C554E] dark:text-[#A39B8E]">
               Resolviendo problemas complejos de frontend, reparando builds
               rotos y optimizando la velocidad de sitios web con precisión
@@ -44,20 +51,22 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-xs font-mono">
               <li>
-                <a
-                  href="#servicios"
-                  className="hover:text-[#d4430e] transition"
-                >
+                <a href={getRoute("#servicios")} className="hover:text-[#d4430e] transition">
                   Servicios especializados
                 </a>
               </li>
               <li>
-                <a href="#modulos" className="hover:text-[#ee5412] transition">
-                  Módulos de diagnóstico
-                </a>
+                <Link to="/eliminacion-malware" className="hover:text-[#ee5412] transition">
+                  Remoción de Malware
+                </Link>
               </li>
               <li>
-                <a href="#faq" className="hover:text-[#ee5412] transition">
+                <Link to="/optimizacion-velocidad" className="hover:text-[#ee5412] transition">
+                  Optimización de Carga
+                </Link>
+              </li>
+              <li>
+                <a href={getRoute("#faq")} className="hover:text-[#ee5412] transition">
                   Preguntas frecuentes
                 </a>
               </li>
@@ -85,17 +94,9 @@ export default function Footer() {
           <div className="flex items-center gap-3">
             {[
               { name: "GitHub", href: "https://github.com", icon: FiGithub },
-              {
-                name: "LinkedIn",
-                href: "https://linkedin.com",
-                icon: FiLinkedin,
-              },
+              { name: "LinkedIn", href: "https://linkedin.com", icon: FiLinkedin },
               { name: "Twitter", href: "https://twitter.com", icon: FiTwitter },
-              {
-                name: "Instagram",
-                href: "https://instagram.com",
-                icon: FiInstagram,
-              },
+              { name: "Instagram", href: "https://instagram.com", icon: FiInstagram },
             ].map((s) => {
               const Icon = s.icon;
               return (
