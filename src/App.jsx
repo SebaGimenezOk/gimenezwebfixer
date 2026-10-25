@@ -15,7 +15,7 @@ export default function App() {
   const [wizardOpen, setWizardOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#FFFFFF] text-[#0F172A] antialiased font-['Helvetica_Neue',Helvetica,Arial,sans-serif] selection:bg-[#C85A32] selection:text-white">
+    <div className="min-h-screen bg-[#FFFFFF] text-[#0F172A] antialiased font-['Inter',Helvetica,Arial,sans-serif] selection:bg-[#C85A32] selection:text-white">
       <Navbar />
 
       {/* Manejo nativo de rutas */}

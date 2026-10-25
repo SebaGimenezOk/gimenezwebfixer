@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [
     react(),
     SiteMap({
-      hostname: 'https://www.tusitio.com',
+      hostname: 'https://www.gimenezwebfixer.com',
       routes: ['/', '/eliminacion-malware', '/optimizacion-velocidad']
     }),
     tailwindcss(),
