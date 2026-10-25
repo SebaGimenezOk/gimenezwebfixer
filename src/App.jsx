@@ -9,12 +9,7 @@ import Home from "./pages/Home.jsx";
 import Malware from "./pages/Malware.jsx";
 import Speed from "./pages/Speed.jsx";
 
-if (typeof document !== "undefined") {
-  const link = document.createElement("link");
-  link.href = "https://cdnfonts.com";
-  link.rel = "stylesheet";
-  document.head.appendChild(link);
-}
+
 
 export default function App() {
   const [wizardOpen, setWizardOpen] = useState(false);
