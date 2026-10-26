@@ -1,10 +1,7 @@
-import { useOutletContext } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { FiZap, } from "react-icons/fi";
+import { FiZap } from "react-icons/fi";
 
-export default function Speed() {
-  const { setWizardOpen } = useOutletContext() || { setWizardOpen: () => {} };
-
+export default function Speed({ setWizardOpen }) {
   return (
     <>
       <Helmet>
@@ -25,8 +22,11 @@ export default function Speed() {
             Un sitio que tarda más de 3 segundos en cargar pierde el 50% de sus visitas. Optimizamos tus Core Web Vitals (LCP, CLS, INP) para llevar el rendimiento de tu plataforma al 100%.
           </p>
           <div className="mt-8 flex justify-center">
-            <button onClick={() => setWizardOpen("optimizacion")} className="rounded-full bg-[#2D2A26] px-8 py-3.5 text-sm font-semibold text-white shadow-xl hover:bg-[#ee5412] transition cursor-pointer">
-              Optimizar mi velocidad
+            <button 
+              onClick={() => setWizardOpen && setWizardOpen("optimizacion")} 
+              className="rounded-full bg-[#ee5412] px-8 py-3.5 text-sm font-semibold text-white shadow-xl hover:scale-105 transition cursor-pointer"
+            >
+              Optimizar velocidad ahora
             </button>
           </div>
         </div>

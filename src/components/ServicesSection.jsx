@@ -6,7 +6,7 @@ const CORE_SERVICES = [
     icon: FiShield,
     name: "Reparación Web",
     subtitle: "Tu sitio caído o vulnerado, funcionando de nuevo",
-    price: "Desde USD 90",
+    price: "Desde $ 90.000",
     urgency: "Respuesta en < 24hs",
     badge: "Urgencias 24/7",
     features: [
@@ -21,7 +21,7 @@ const CORE_SERVICES = [
     icon: FiRefreshCw,
     name: "Actualización Web",
     subtitle: "Modernizá tu stack sin perder lo que ya funciona",
-    price: "Desde USD 140",
+    price: "Desde $ 140.000",
     urgency: "Sugerido cada 6 meses",
     badge: "Mantenimiento",
     features: [
@@ -36,7 +36,7 @@ const CORE_SERVICES = [
     icon: FiServer,
     name: "Migración Web",
     subtitle: "Cambio de hosting o dominio sin interrupción",
-    price: "Desde USD 160",
+    price: "Desde $ 170.000",
     urgency: "Downtime real: 0 min",
     badge: "Sin caídas",
     features: [
@@ -53,7 +53,7 @@ export default function ServicesSection({ onOpenWizard }) {
     <section id="servicios" className="py-20 bg-[#FFFBF7] border-y border-[#E6DFD5]">
       <div className="mx-auto max-w-7xl px-6 sm:px-10">
         <div className="text-center max-w-2xl mx-auto">
-          <h2 className="text-3xl font-black text-[#2D2A26] sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-[#2D2A26] sm:text-4xl">
             Soluciones Especializadas
           </h2>
           <p className="mt-3 text-[#7A7265] text-sm sm:text-base">
@@ -78,11 +78,11 @@ export default function ServicesSection({ onOpenWizard }) {
                   </span>
                 </div>
 
-                <h3 className="mt-6 text-xl font-black text-[#2D2A26]">{s.name}</h3>
+                <h3 className="mt-6 text-xl font-extrabold text-[#2D2A26]">{s.name}</h3>
                 <p className="mt-2 text-xs text-[#7A7265] leading-relaxed">{s.subtitle}</p>
 
                 <div className="my-6 border-t border-[#E6DFD5] pt-4">
-                  <div className="text-2xl font-black text-[#2D2A26]">{s.price}</div>
+                  <div className="text-2xl font-extrabold text-[#2D2A26]">{s.price}</div>
                   <div className="text-xs font-semibold text-[#ee5412] mt-0.5">{s.urgency}</div>
                 </div>
 
