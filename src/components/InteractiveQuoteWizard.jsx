@@ -97,20 +97,27 @@ const INITIAL_FORM_DATA = {
   telefono: ""
 };
 
-export default function InteractiveQuoteWizard({ isOpen, onClose }) {
-  const [step, setStep] = useState(1);
-  const [formData, setFormData] = useState(INITIAL_FORM_DATA);
+export default function InteractiveQuoteWizard({ isOpen, onClose, initialServiceKey = null }) {
+  const servicioEncontrado = SERVICIOS_OPCIONES.find((s) => s.key === initialServiceKey);
+
+  const [step, setStep] = useState(servicioEncontrado ? 2 : 1);
+  const [formData, setFormData] = useState({
+    ...INITIAL_FORM_DATA,
+    servicio: servicioEncontrado ? servicioEncontrado.title : INITIAL_FORM_DATA.servicio,
+    servicioKey: servicioEncontrado ? servicioEncontrado.key : INITIAL_FORM_DATA.servicioKey,
+  });
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
 
   if (!isOpen) return null;
 
+  
   const handleSelectService = (servObj) => {
     setFormData((prev) => ({ 
       ...prev, 
       servicio: servObj.title,
       servicioKey: servObj.key,
-      problema: "" // Limpia el problema si cambia de servicio
+      problema: ""
     }));
     setStep(2);
   };
@@ -163,7 +170,6 @@ export default function InteractiveQuoteWizard({ isOpen, onClose }) {
     onClose();
   };
 
-  // Obtiene los síntomas según el servicio seleccionado
   const problemasActuales = PROBLEMAS_POR_SERVICIO[formData.servicioKey] || PROBLEMAS_POR_SERVICIO.reparacion;
 
   return (

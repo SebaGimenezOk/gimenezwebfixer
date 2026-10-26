@@ -25,7 +25,7 @@ export default function Speed() {
             Un sitio que tarda más de 3 segundos en cargar pierde el 50% de sus visitas. Optimizamos tus Core Web Vitals (LCP, CLS, INP) para llevar el rendimiento de tu plataforma al 100%.
           </p>
           <div className="mt-8 flex justify-center">
-            <button onClick={() => setWizardOpen(true)} className="rounded-full bg-[#2D2A26] px-8 py-3.5 text-sm font-semibold text-white shadow-xl hover:bg-[#ee5412] transition cursor-pointer">
+            <button onClick={() => setWizardOpen("optimizacion")} className="rounded-full bg-[#2D2A26] px-8 py-3.5 text-sm font-semibold text-white shadow-xl hover:bg-[#ee5412] transition cursor-pointer">
               Optimizar mi velocidad
             </button>
           </div>

@@ -22,7 +22,7 @@ export default function App() {
 
       <InteractiveQuoteWizard
         isOpen={wizardOpen}
-        onClose={() => setWizardOpen(false)}
+        onClose={() => setWizardOpen(false)}r
       />
       <TestimonialsSection />
    
